@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Binary;
+using FileIOOperation;
+using System;
 
 namespace FileIOOperation
 {
@@ -11,7 +13,7 @@ namespace FileIOOperation
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine(" 1. Checking Whether the File Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader\n 7. Write Using StreamWriter");
+                Console.WriteLine(" 1. Checking Whether the File Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File\n 5. Deleting File\n 6. Read From StreamReader\n 7. Write Using StreamWriter\n 8. Binary Serialization\n 9. Binary De-Serialization");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,6 +39,12 @@ namespace FileIOOperation
                         break;
                     case 7:
                         FileOperation.WriteUsingStreamWriter();
+                        break;
+                    case 8:
+                        BinarySerialization.Serialization();
+                        break;
+                    case 9:
+                        BinarySerialization.Deserialization();
                         break;
                     default:
                         choice = false;
