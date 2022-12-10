@@ -11,12 +11,15 @@ namespace FileIOOperation
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine(" 1. Check Files Exists or Not");
+                Console.WriteLine(" 1. Checking Whether the File Exists or Not\n 2. Read All Lines");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         FileOperation.FileExist();
+                        break;
+                    case 2:
+                        FileOperation.ReadAllLines();
                         break;
                     default:
                         choice = false;
