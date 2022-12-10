@@ -25,5 +25,11 @@ namespace FileIOOperation
                 Console.WriteLine(data);
             }
         }
+        public static void ReadAllText()
+        {
+            string filePath = @"D:\Projects-Bridgelabz\File_IO_Operation\FileIOOperation\Operation.txt";
+            string lines = File.ReadAllText(filePath);
+            Console.WriteLine(lines);
+        }
     }
 }
