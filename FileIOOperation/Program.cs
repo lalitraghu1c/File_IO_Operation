@@ -11,7 +11,7 @@ namespace FileIOOperation
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine(" 1. Checking Whether the File Exists or Not\n 2. Read All Lines\n 3. Read All Text");
+                Console.WriteLine(" 1. Checking Whether the File Exists or Not\n 2. Read All Lines\n 3. Read All Text\n 4. Copying File");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +23,10 @@ namespace FileIOOperation
                         break;
                     case 3:
                         FileOperation.ReadAllText();
+                        break;
+                    case 4:
+                        FileOperation.CopyFile();
+                        Console.WriteLine("File Copied Successfully");
                         break;
                     default:
                         choice = false;
